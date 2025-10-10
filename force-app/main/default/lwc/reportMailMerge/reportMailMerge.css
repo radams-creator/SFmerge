@@ -1,0 +1,4 @@
+.preview-body {
+    max-height: 18rem;
+    overflow: auto;
+}
