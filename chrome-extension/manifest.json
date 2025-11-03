@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Salesforce Record ID",
+  "description": "Adds a context menu option to copy the Salesforce record ID from Lightning record links.",
+  "version": "1.0.0",
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

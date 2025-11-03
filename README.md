@@ -42,6 +42,9 @@ force-app/
       sample_letter_template.docx    # Example template (optional placeholder)
 config/
   project-scratch-def.json           # Scratch org definition (if using SFDX)
+chrome-extension/
+  manifest.json                      # Chrome extension configuration
+  background.js                      # Context menu logic for copying SF IDs
 ```
 
 Only the Apex classes and the Lightning Web Component are included in this
@@ -93,6 +96,22 @@ underscores).
 
 You can also expose related object fields by editing the Apex service to add
 custom token resolvers.  See the `TaxLetterService` implementation for details.
+
+## Chrome Extension: Copy Salesforce Record ID
+
+A lightweight Chrome extension is included to simplify copying Salesforce
+Lightning record IDs from account links.
+
+### Usage
+
+1. Open `chrome://extensions` in Google Chrome.
+2. Enable **Developer mode**.
+3. Click **Load unpacked** and select the `chrome-extension` folder from this
+   repository.
+4. On any Lightning page, right-click an account link that looks like
+   `https://<domain>.lightning.force.com/lightning/r/Account/<ID>/view` and choose
+   **Copy Salesforce ID**. The record ID is copied to your clipboard and a toast
+   confirmation appears on the page.
 
 ## Extending the Solution
 
