@@ -106,6 +106,20 @@ custom token resolvers.  See the `TaxLetterService` implementation for details.
 - Replace the simple token engine with a more powerful parser that supports
   conditionals and loops (e.g., via the Apex `Template` library or custom Apex).
 
+## Google Sheets helper scripts
+
+The `scripts/currencyMailMerge.gs` file contains a Google Apps Script utility
+that adds mail merge-friendly helper columns for currency data in Google Sheets.
+To use it:
+
+1. Copy the file contents into the Script Editor for your spreadsheet
+   (`Extensions → Apps Script`).
+2. Select the range of cells that contains your currency data (include the
+   header row if you want helper column headers).
+3. Run `createMailMergeCurrencyColumns` from the Script Editor. The script inserts
+   new columns to the right of the selection that contain the displayed currency
+   values stored as plain text so mail merges keep their formatting.
+
 ## Disclaimer
 
 This implementation is intended as a starting point.  Review, test, and secure
